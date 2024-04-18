@@ -1,0 +1,18 @@
+.card {
+    width: calc(20vw - 20px); /* Ajustez cette valeur en fonction de la largeur souhaitée */
+    height: calc(25vw - 20px); /* Ajustez cette valeur en fonction de la hauteur souhaitée */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    touch-action: none;
+  }
+  
+  .card-content {
+    font-size: 4vw; /* Ajustez cette valeur en fonction de la taille de la police souhaitée */
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
