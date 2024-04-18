@@ -1,11 +1,16 @@
 .column {
-    background-color: antiquewhite;
-    border-radius: 5px;
-    padding: 15px;
-    width: 95vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height : auto;
-    box-sizing: border-box
+    align-items: flex-start;
+    gap: 10px;
+    overflow-x: auto;       /* Active le défilement horizontal */
+    overflow-y: hidden;
+    padding: 10px;          /* Padding interne pour ne pas que les cartes touchent directement les bords */
+    width: 95vw;           /* Largeur fixe, ajuste selon tes besoins */
+    height: 350px;          /* Hauteur fixe, ajuste selon tes besoins */
+    border-radius: 10px;    /* Coins arrondis pour un aspect visuel agréable */
+    background: #c8c9a8;    /* Couleur de fond, choisis selon ton design */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour la profondeur */
+    margin: 20px auto;      /* Marge externe pour centrer le conteneur et donner de l'espace autour */
+    box-sizing: border-box; /* S'assure que padding et border sont inclus dans la largeur/hauteur */
 }

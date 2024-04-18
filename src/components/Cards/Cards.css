@@ -1,15 +1,16 @@
 .card {
-    width: calc(20vw - 20px); /* Ajustez cette valeur en fonction de la largeur souhaitée */
-    height: calc(25vw - 20px); /* Ajustez cette valeur en fonction de la hauteur souhaitée */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
-    touch-action: none;
-  }
-  
+  flex-shrink: 0;         /* Empêche les cartes de rétrécir */
+  flex-grow: 0;           /* Empêche les cartes de grandir */
+  flex-basis: 14vw;      /* Largeur de base pour chaque carte, ajuste selon le contenu et la disposition */
+  margin-right: 10px;     /* Marge à droite pour séparer les cartes */
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 5px;     /* Coins légèrement arrondis pour les cartes */
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  aspect-ratio: 5 / 7;    /* Maintient un ratio largeur/hauteur de 5:7, typique des cartes de poker */
+}
+
   .card-content {
     font-size: 4vw; /* Ajustez cette valeur en fonction de la taille de la police souhaitée */
     font-weight: bold;
