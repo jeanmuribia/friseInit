@@ -1,19 +1,52 @@
 .card {
   flex-shrink: 0;         /* Empêche les cartes de rétrécir */
   flex-grow: 0;           /* Empêche les cartes de grandir */
-  flex-basis: 14vw;      /* Largeur de base pour chaque carte, ajuste selon le contenu et la disposition */
-  margin-right: 10px;     /* Marge à droite pour séparer les cartes */
+  flex-basis: 95%;       /* Largeur de base pour chaque carte (95% du conteneur Column) */
+  margin: 10px;     /* Marge à droite pour séparer les cartes */
   background-color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   border-radius: 5px;     /* Coins légèrement arrondis pour les cartes */
   background-color: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   aspect-ratio: 5 / 7;    /* Maintient un ratio largeur/hauteur de 5:7, typique des cartes de poker */
 }
 
-  .card-content {
-    font-size: 4vw; /* Ajustez cette valeur en fonction de la taille de la police souhaitée */
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  }
+.card-content {
+  font-size: 4vw; /* Ajustez cette valeur en fonction de la taille de la police souhaitée */
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-container {
+  /* Styles pour le conteneur de carte */
+  position: relative;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: 15vw;
+  margin-right: 10px;
+  
+  border-radius: 5px;
+  aspect-ratio: 5 / 7;
+  padding: 10px; /* Ajoute un padding pour donner de l'espace au bouton croix */
+}
+
+.delete-button {
+  /* Styles pour le bouton de suppression */
+  position: absolute;
+  bottom: -10px; /* Décalage de 20px en dessous de la carte */
+  left: 50%; /* Centre horizontalement */
+  transform: translateX(-50%); /* Réglage pour centrer horizontalement */
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 20px; /* Largeur du bouton */
+  height: 20px; /* Hauteur du bouton */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px; /* Taille de la croix */
+  color: red; /* Couleur de la croix */
+  
+}

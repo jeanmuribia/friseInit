@@ -43,15 +43,21 @@ export default function App() {
       setCards(cards => [...cards, {id: cards.length + 1}])
     }
 
-  return (
-    <div className='App'>
-      <h1> Frise d'initiative</h1>
-      <DndContext sensors={sensors} 
-                  onDragEnd={handleDragEnd} 
-                  collisionDetection={closestCorners}>
-      <Input onSubmit = {addCard}/>
-      <Column cards={cards}/>
-      </DndContext>
-    </div>
-  );
-}
+    const deleteCard = (cardId) => {
+      setCards((prevCards) => prevCards.filter((card) => card.id !== cardId));
+    };
+    
+    return (
+      <div className="App">
+        <h1> Frise d'initiative</h1>
+        <DndContext
+          sensors={sensors}
+          onDragEnd={handleDragEnd}
+          collisionDetection={closestCorners}
+        >
+          <Input onSubmit={addCard} />
+          <Column cards={cards} onDelete={deleteCard} />
+        </DndContext>
+      </div>
+    );
+  }
